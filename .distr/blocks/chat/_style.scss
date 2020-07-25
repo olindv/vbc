@@ -1,0 +1,245 @@
+.chat {
+    
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: $grey;
+        border: 1px solid #C4C8D0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__left {
+        flex-basis: 24%;
+
+        &_header {
+            @include uppercase;
+            position: relative;
+            padding: 20px 0;
+            border-bottom: 2px solid $white;
+        }
+        &_title {
+            text-align: center;
+        }
+        &_close {
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &_subtitle {
+            @include uppercase;
+            padding: 30px 0 20px 30px;
+        }
+        &_list {
+            padding-left: 20px;
+        }
+        &_product {
+            background: $white;
+            font-size: 14px;
+            padding: 12px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            &-top {
+                margin-bottom: 10px;
+            }
+            &-name {
+                i {
+                    margin-right: 5px;
+                }
+            }
+            &-img {
+                margin-right: 4px;
+                i {
+                    color: $darkgrey;
+                }
+            }
+            &-count {
+                @include flex(flex, center, center);
+                width: 16px;
+                text-align: center;
+                border-radius: 50%;
+                font-weight: 600;
+                font-size: 10px;
+            }
+            &-message {
+                margin-right: 10px;
+            }
+        }
+    }
+    &__right {
+        flex-basis: 76%;
+        padding-bottom: 30px;
+        &_form {
+            padding-right: 30px;
+        }
+        &_content {
+            padding-bottom: 30px;
+            position: relative;
+        }
+        &_list {
+            background: #fff;
+            max-height: 500px;
+            overflow-y: scroll;
+            padding: 10px 20px 10px 30px;
+
+            &::-webkit-scrollbar {
+                width: 9px;
+            }
+    
+            & {
+                scrollbar-width: thin;
+                scrollbar-color: $darkgrey $white;
+                
+            }
+    
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background-color: $darkgrey;
+                border: 9px solid $darkgrey;
+                border-radius: 10px;
+            }
+        }
+        &_date {
+            @include uppercase;
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $white;
+            background: $darkgrey;
+            padding: 5px 10px;
+            box-shadow: 6px 7px 14px 0px rgba(48, 50, 50, 0.5);
+            border-radius: 20px;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    &__message {
+        margin-bottom: 10px;
+        &_wrap {
+            font-size: 14px;
+            padding: 15px;
+            border-radius: 5px;
+            
+        }
+        &_personal {
+            padding-left: 0px;
+            padding-right: 30px;
+            
+        }
+        &_client {
+            padding-left: 30px;
+            padding-right: 0;
+            
+
+        }
+        &_personal & {
+            &_wrap {
+                background: $lightgrey;
+                border-top-left-radius: 0;
+            }
+        }
+        &_client &{
+            &_wrap {
+                background: $white;
+                border-top-right-radius: 0;
+                border: 1px solid $lightgrey;
+            }
+        }
+        &_header {
+            color: $darkgrey;
+            margin-bottom: 10px;
+        }
+        &_upload {
+            @include flex(flex, initial, center);
+            flex-wrap: wrap;
+            // align-items: center;
+            &_text {
+                padding: 5px 10px;
+                background-color: $lightgrey;
+                border-left: 2px solid $red;
+                font-style: italic;
+                margin-right: 20px;
+            }
+            &_input {
+                display: none;
+            }
+            &_file {
+                div {
+                    @include uppercase;
+                    color: $red;
+                    border-bottom: 1px solid $red;
+                }
+            }
+        }
+
+    }
+    &__newmessage {
+        @include flex(flex, initial, center);
+        div {
+            height: 1px;
+            width: 100%;
+            background-color: #5A8DE0;
+        }
+        p {
+            @include uppercase;
+            text-align: center;
+            padding: 0 10px;
+            color: #5A8BE0;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+    }
+    &__textarea {
+        resize: none;
+        width: 100%;
+        border: none;
+        text-indent: 10px;
+        padding-top: 10px;
+        &::placeholder {
+            font-style: italic;
+            color: $darkgrey;
+        }
+    }
+    &__row {
+        padding-top: 10px;
+    }
+    &__actions {
+        @include flex(flex, initial, center);
+        flex-wrap: wrap;
+        &_item {
+            margin-right: 15px;
+        }
+        &_link {
+            @include uppercase;
+            display: block;
+            padding-bottom: 5px;
+            border-bottom: 2px solid $darkgrey;
+            font-size: 13px;
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+    &__button {
+        button {
+            @include uppercase;
+            background: $white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 4px 12px 0px rgba(48, 50, 50, 0.76);
+            padding: 12px 15px;
+            i {
+                margin-left: 5px;
+            }
+        }
+        
+
+    }
+}

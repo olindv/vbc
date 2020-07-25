@@ -1,0 +1,11 @@
+@mixin uppercase {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $darkgrey;
+}
+
+@mixin flex ($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
